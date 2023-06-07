@@ -71,6 +71,7 @@
                                     <outlet property="locationLabel" destination="tmu-KQ-hlI" id="i9c-Yz-bRr"/>
                                     <outlet property="nameLabel" destination="db0-hH-avh" id="Oe6-dy-ad5"/>
                                     <outlet property="typeLabel" destination="8jU-vo-P9y" id="aMx-FN-YER"/>
+                                    <segue destination="bif-cm-Koc" kind="show" identifier="showDetail" id="qJ9-lj-W05"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -79,7 +80,7 @@
                             <outlet property="delegate" destination="BNm-Zi-4Ao" id="uMf-fN-USU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My places" id="Nzm-f1-NCb">
+                    <navigationItem key="navigationItem" title="My places" largeTitleDisplayMode="never" id="Nzm-f1-NCb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pQK-8Z-6sq">
                             <connections>
                                 <segue destination="BYh-hc-56n" kind="presentation" modalTransitionStyle="coverVertical" id="Tyu-Oz-ttJ"/>
@@ -96,7 +97,7 @@
             <objects>
                 <tableViewController id="bif-cm-Koc" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eQX-Pp-KpN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
@@ -242,7 +243,7 @@
                             <outlet property="delegate" destination="bif-cm-Koc" id="wQs-8I-PS8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New place" id="Jmn-8l-rFG">
+                    <navigationItem key="navigationItem" title="New place" largeTitleDisplayMode="always" id="Jmn-8l-rFG">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="adR-o7-od6">
                             <connections>
                                 <action selector="cancelAction:" destination="bif-cm-Koc" id="XRH-KM-1m1"/>
@@ -265,14 +266,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plE-Pi-a0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3Kb-sI-ndq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1672.5190839694656" y="-130.28169014084509"/>
+            <point key="canvasLocation" x="964" y="-130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cyz-je-2z3">
             <objects>
                 <navigationController id="rz6-h0-Scq" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H5S-zc-P9C">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="H5S-zc-P9C">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
@@ -302,9 +303,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASi-cK-XB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.69465648854953" y="-130.28169014084509"/>
+            <point key="canvasLocation" x="964" y="-827"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qJ9-lj-W05"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <systemColor name="systemBackgroundColor">
