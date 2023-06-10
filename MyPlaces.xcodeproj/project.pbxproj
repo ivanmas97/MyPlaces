@@ -52,7 +52,6 @@
 		0B74D0642A1F7F8100AAB546 = {
 			isa = PBXGroup;
 			children = (
-				0B05ECE62A2E690900DF65E1 /* StorageManager.swift */,
 				0B74D06F2A1F7F8100AAB546 /* MyPlaces */,
 				0B74D06E2A1F7F8100AAB546 /* Products */,
 			);
@@ -73,6 +72,7 @@
 				0B74D0842A1F842600AAB546 /* MainViewController.swift */,
 				0BCEADE02A247633004C4342 /* NewPlaceViewController.swift */,
 				0B7F05062A20A71E00E452C4 /* PlaceModel.swift */,
+				0B05ECE62A2E690900DF65E1 /* StorageManager.swift */,
 				0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */,
 				0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */,
 				0B74D0762A1F7F8100AAB546 /* Main.storyboard */,
