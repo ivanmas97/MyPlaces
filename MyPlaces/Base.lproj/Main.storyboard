@@ -151,6 +151,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="u8x-66-zYW">
+                                        <rect key="frame" x="0.0" y="525" width="393" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u8x-66-zYW" id="22q-Vd-fv0">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-4i-vQj" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Cb8-4i-vQj" firstAttribute="centerY" secondItem="22q-Vd-fv0" secondAttribute="centerY" id="5Nn-Vu-FQR"/>
+                                                <constraint firstItem="Cb8-4i-vQj" firstAttribute="centerX" secondItem="22q-Vd-fv0" secondAttribute="centerX" id="Vfh-VP-bek"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -176,6 +193,7 @@
                         <outlet property="placeLocation" destination="e5G-gL-3pt" id="ydF-SV-JZs"/>
                         <outlet property="placeName" destination="lLp-gs-JdA" id="kwJ-Aq-KG1"/>
                         <outlet property="placeType" destination="vVO-fl-UXy" id="T0l-XQ-Lht"/>
+                        <outlet property="ratingControl" destination="Cb8-4i-vQj" id="3wM-e1-GMW"/>
                         <outlet property="saveButton" destination="cYM-wA-LMA" id="zkD-7q-wRr"/>
                     </connections>
                 </tableViewController>
@@ -346,6 +364,11 @@
             <point key="canvasLocation" x="964" y="-827"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Cb8-4i-vQj">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Z77-12-wOY"/>
     </inferredMetricsTieBreakers>

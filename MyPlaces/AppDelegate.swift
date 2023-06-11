@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let config = Realm.Configuration(
-            schemaVersion: 2)
+            schemaVersion: 3)
         // Use this configuration when opening realms
         Realm.Configuration.defaultConfiguration = config
         let realm = try! Realm()
