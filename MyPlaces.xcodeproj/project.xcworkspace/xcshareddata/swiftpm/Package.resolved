@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "cosmos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "cce521e734d0090494bd4afab5fd2e2f2465c1af"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
       "state" : {
-        "revision" : "36b2df44453ba5e830369c76ab0683799a287605",
-        "version" : "13.13.0"
+        "revision" : "93cc224680a520a84e1c01aa8866042c52eb7958",
+        "version" : "13.15.0"
       }
     },
     {
@@ -15,7 +24,7 @@
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "eed598a7aa9b56fcf7273ea4279a516af8f7d3f3"
+        "revision" : "66c426b9cd5276166bd4ea02ab76219747ba1352"
       }
     }
   ],

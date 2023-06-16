@@ -10,6 +10,7 @@
 		0B05ECE32A2E613400DF65E1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0B05ECE22A2E613400DF65E1 /* Realm */; };
 		0B05ECE52A2E613400DF65E1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B05ECE42A2E613400DF65E1 /* RealmSwift */; };
 		0B05ECE72A2E690900DF65E1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05ECE62A2E690900DF65E1 /* StorageManager.swift */; };
+		0B4AB8362A3C470C008B3401 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 0B4AB8352A3C470C008B3401 /* Cosmos */; };
 		0B74D0712A1F7F8100AAB546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0702A1F7F8100AAB546 /* AppDelegate.swift */; };
 		0B74D0732A1F7F8100AAB546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */; };
 		0B74D0782A1F7F8100AAB546 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B74D0762A1F7F8100AAB546 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4AB8362A3C470C008B3401 /* Cosmos in Frameworks */,
 				0B05ECE52A2E613400DF65E1 /* RealmSwift in Frameworks */,
 				0B05ECE32A2E613400DF65E1 /* Realm in Frameworks */,
 			);
@@ -105,6 +107,7 @@
 			packageProductDependencies = (
 				0B05ECE22A2E613400DF65E1 /* Realm */,
 				0B05ECE42A2E613400DF65E1 /* RealmSwift */,
+				0B4AB8352A3C470C008B3401 /* Cosmos */,
 			);
 			productName = MyPlaces;
 			productReference = 0B74D06D2A1F7F8100AAB546 /* MyPlaces.app */;
@@ -136,6 +139,7 @@
 			mainGroup = 0B74D0642A1F7F8100AAB546;
 			packageReferences = (
 				0B05ECE12A2E613400DF65E1 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				0B4AB8342A3C470C008B3401 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 0B74D06E2A1F7F8100AAB546 /* Products */;
 			projectDirPath = "";
@@ -405,6 +409,14 @@
 				kind = branch;
 			};
 		};
+		0B4AB8342A3C470C008B3401 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -417,6 +429,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B05ECE12A2E613400DF65E1 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		0B4AB8352A3C470C008B3401 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B4AB8342A3C470C008B3401 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
