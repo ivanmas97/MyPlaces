@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import Cosmos
+//import Cosmos
 
 class NewPlaceViewController: UITableViewController {
     
     var newPlace = Place()
     var currentPlace: Place!
     var imageIsChanged = false
-    var currentRating = 0.0
+//    var currentRating = 0.0
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -22,7 +22,7 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeLocation: UITextField!
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var ratingControl: RatingControl!
-    @IBOutlet weak var cosmosView: CosmosView!
+//    @IBOutlet weak var cosmosView: CosmosView!
     
     
     override func viewDidLoad() {
@@ -34,10 +34,10 @@ class NewPlaceViewController: UITableViewController {
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
         
-        cosmosView.settings.fillMode = .half
-        cosmosView.didTouchCosmos = { rating in
-            self.currentRating = rating
-        }
+//        cosmosView.settings.fillMode = .half
+//        cosmosView.didTouchCosmos = { rating in
+//            self.currentRating = rating
+//        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -96,7 +96,7 @@ class NewPlaceViewController: UITableViewController {
                              location: placeLocation.text,
                              type: placeType.text,
                              imageData: imageData,
-                             rating: currentRating)
+                             rating: Double(ratingControl.rating))
         
         if currentPlace != nil {
             try! realm.write {
@@ -124,7 +124,7 @@ class NewPlaceViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeType.text = currentPlace?.type
             placeLocation.text = currentPlace?.location
-            cosmosView.rating = currentPlace.rating
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     

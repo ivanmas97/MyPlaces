@@ -161,30 +161,11 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-4i-vQj" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="70" translatesAutoresizingMaskIntoConstraints="NO" id="fzL-Jf-Bg4" customClass="CosmosView" customModule="Cosmos">
-                                                    <rect key="frame" x="76.666666666666686" y="35" width="240" height="70"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                            <real key="value" value="30"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
-                                                            <real key="value" value="2"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fzL-Jf-Bg4" firstAttribute="centerY" secondItem="22q-Vd-fv0" secondAttribute="centerY" id="0fe-k9-06Y"/>
                                                 <constraint firstItem="Cb8-4i-vQj" firstAttribute="centerY" secondItem="22q-Vd-fv0" secondAttribute="centerY" id="5Nn-Vu-FQR"/>
                                                 <constraint firstItem="Cb8-4i-vQj" firstAttribute="centerX" secondItem="22q-Vd-fv0" secondAttribute="centerX" id="Vfh-VP-bek"/>
-                                                <constraint firstItem="fzL-Jf-Bg4" firstAttribute="centerX" secondItem="22q-Vd-fv0" secondAttribute="centerX" id="Zwd-9F-2dO"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="Cb8-4i-vQj"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -208,7 +189,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cosmosView" destination="fzL-Jf-Bg4" id="GVM-4U-JXK"/>
                         <outlet property="placeImage" destination="LA7-dw-EaK" id="G3J-tS-hjr"/>
                         <outlet property="placeLocation" destination="e5G-gL-3pt" id="ydF-SV-JZs"/>
                         <outlet property="placeName" destination="lLp-gs-JdA" id="kwJ-Aq-KG1"/>
@@ -409,9 +389,6 @@
         </designable>
         <designable name="Sii-MY-Ccu">
             <size key="intrinsicContentSize" width="150" height="39"/>
-        </designable>
-        <designable name="fzL-Jf-Bg4">
-            <size key="intrinsicContentSize" width="240" height="70"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
