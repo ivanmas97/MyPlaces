@@ -100,7 +100,7 @@ class NewPlaceViewController: UITableViewController {
     
     
     func savePlace() {
-        var image = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
+        let image = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
         
         let imageData = image?.pngData()
         let newPlace = Place(name: placeName.text!,

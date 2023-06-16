@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +14,7 @@
         <scene sceneID="yoy-Gi-VLt">
             <objects>
                 <tableViewController id="bif-cm-Koc" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eQX-Pp-KpN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eQX-Pp-KpN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -244,13 +245,36 @@
                                     <action selector="closeVC" destination="8rj-5u-DQd" eventType="touchUpInside" id="foi-qj-a3k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyY-S3-F4X">
+                                <rect key="frame" x="313" y="703" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ciL-lt-T3P"/>
+                                    <constraint firstAttribute="width" constant="50" id="u2J-Ic-Uhn"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="location.circle.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                        <hierarchicalColors>
+                                            <color systemColor="labelColor"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                </state>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="8rj-5u-DQd" eventType="touchUpInside" id="Gpr-XG-ycO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h8w-pB-WGE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="h8w-pB-WGE" firstAttribute="trailing" secondItem="l7o-uL-uPL" secondAttribute="trailing" constant="30" id="1ae-wB-vAa"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="leading" secondItem="h8w-pB-WGE" secondAttribute="leading" id="2Da-XC-UUm"/>
+                            <constraint firstItem="h8w-pB-WGE" firstAttribute="bottom" secondItem="pyY-S3-F4X" secondAttribute="bottom" constant="30" id="3Um-Yl-O24"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="trailing" secondItem="h8w-pB-WGE" secondAttribute="trailing" id="853-gQ-450"/>
+                            <constraint firstItem="h8w-pB-WGE" firstAttribute="trailing" secondItem="pyY-S3-F4X" secondAttribute="trailing" constant="30" id="B4B-7P-nq1"/>
                             <constraint firstAttribute="bottom" secondItem="TtP-PI-dpT" secondAttribute="bottom" id="Hz3-7L-f4f"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="top" secondItem="h8w-pB-WGE" secondAttribute="top" constant="-59" id="Lk0-vS-PjC"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="top" secondItem="jS4-kA-oI8" secondAttribute="top" id="X2U-xQ-97u"/>
@@ -320,7 +344,7 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="39" translatesAutoresizingMaskIntoConstraints="NO" id="Sii-MY-Ccu" customClass="CosmosView" customModule="Cosmos">
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="39" translatesAutoresizingMaskIntoConstraints="NO" id="Sii-MY-Ccu" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="265" y="23" width="120" height="39"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -453,7 +477,7 @@
             <size key="intrinsicContentSize" width="252" height="44"/>
         </designable>
         <designable name="Sii-MY-Ccu">
-            <size key="intrinsicContentSize" width="150" height="39"/>
+            <size key="intrinsicContentSize" width="120" height="39"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
@@ -464,9 +488,19 @@
         <image name="arrow.down" catalog="system" width="118" height="128"/>
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <image name="map" width="50" height="50"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
