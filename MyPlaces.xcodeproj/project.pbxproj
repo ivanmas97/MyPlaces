@@ -10,6 +10,7 @@
 		0B05ECE32A2E613400DF65E1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0B05ECE22A2E613400DF65E1 /* Realm */; };
 		0B05ECE52A2E613400DF65E1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B05ECE42A2E613400DF65E1 /* RealmSwift */; };
 		0B05ECE72A2E690900DF65E1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B05ECE62A2E690900DF65E1 /* StorageManager.swift */; };
+		0B3D539D2A3C6B1000538BA0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D539C2A3C6B1000538BA0 /* MapViewController.swift */; };
 		0B4AB8362A3C470C008B3401 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 0B4AB8352A3C470C008B3401 /* Cosmos */; };
 		0B74D0712A1F7F8100AAB546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0702A1F7F8100AAB546 /* AppDelegate.swift */; };
 		0B74D0732A1F7F8100AAB546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0B05ECE62A2E690900DF65E1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		0B3D539C2A3C6B1000538BA0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0B74D06D2A1F7F8100AAB546 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B74D0702A1F7F8100AAB546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */,
 				0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */,
 				0B9E547D2A36251000E19F30 /* RatingControl.swift */,
+				0B3D539C2A3C6B1000538BA0 /* MapViewController.swift */,
 				0B74D0762A1F7F8100AAB546 /* Main.storyboard */,
 				0B74D0792A1F7F8300AAB546 /* Assets.xcassets */,
 				0B74D07B2A1F7F8300AAB546 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				0BCEADE12A247633004C4342 /* NewPlaceViewController.swift in Sources */,
 				0B74D0712A1F7F8100AAB546 /* AppDelegate.swift in Sources */,
 				0B05ECE72A2E690900DF65E1 /* StorageManager.swift in Sources */,
+				0B3D539D2A3C6B1000538BA0 /* MapViewController.swift in Sources */,
 				0B9E547E2A36251000E19F30 /* RatingControl.swift in Sources */,
 				0B7F05072A20A71E00E452C4 /* PlaceModel.swift in Sources */,
 				0B74D0872A209B6700AAB546 /* CustomTableViewCell.swift in Sources */,
