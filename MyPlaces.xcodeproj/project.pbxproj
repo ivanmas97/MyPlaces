@@ -20,6 +20,7 @@
 		0B74D0852A1F842600AAB546 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0842A1F842600AAB546 /* MainViewController.swift */; };
 		0B74D0872A209B6700AAB546 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */; };
 		0B7F05072A20A71E00E452C4 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F05062A20A71E00E452C4 /* PlaceModel.swift */; };
+		0B8587A82A40CC8900F203D4 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8587A72A40CC8900F203D4 /* MapManager.swift */; };
 		0B9E547E2A36251000E19F30 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E547D2A36251000E19F30 /* RatingControl.swift */; };
 		0BCEADE12A247633004C4342 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEADE02A247633004C4342 /* NewPlaceViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		0B74D0842A1F842600AAB546 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0B7F05062A20A71E00E452C4 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		0B8587A72A40CC8900F203D4 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapManager.swift; path = ../MapManager.swift; sourceTree = "<group>"; };
 		0B9E547D2A36251000E19F30 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		0BCEADE02A247633004C4342 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,21 +76,62 @@
 		0B74D06F2A1F7F8100AAB546 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				0B74D0702A1F7F8100AAB546 /* AppDelegate.swift */,
-				0B74D0842A1F842600AAB546 /* MainViewController.swift */,
-				0BCEADE02A247633004C4342 /* NewPlaceViewController.swift */,
-				0B7F05062A20A71E00E452C4 /* PlaceModel.swift */,
-				0B05ECE62A2E690900DF65E1 /* StorageManager.swift */,
-				0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */,
-				0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */,
-				0B9E547D2A36251000E19F30 /* RatingControl.swift */,
-				0B3D539C2A3C6B1000538BA0 /* MapViewController.swift */,
-				0B74D0762A1F7F8100AAB546 /* Main.storyboard */,
-				0B74D0792A1F7F8300AAB546 /* Assets.xcassets */,
-				0B74D07B2A1F7F8300AAB546 /* LaunchScreen.storyboard */,
-				0B74D07E2A1F7F8300AAB546 /* Info.plist */,
+				0B8587A92A40D9C500F203D4 /* ViewControllers */,
+				0B8587AB2A40D9FA00F203D4 /* Helpers */,
+				0B8587AA2A40D9EC00F203D4 /* Models */,
+				0B8587AD2A40DA4100F203D4 /* Support Files */,
+				0B8587AE2A40DA6E00F203D4 /* IBuilder */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		0B8587A92A40D9C500F203D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B74D0842A1F842600AAB546 /* MainViewController.swift */,
+				0B3D539C2A3C6B1000538BA0 /* MapViewController.swift */,
+				0BCEADE02A247633004C4342 /* NewPlaceViewController.swift */,
+				0B74D0862A209B6700AAB546 /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0B8587AA2A40D9EC00F203D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B7F05062A20A71E00E452C4 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B8587AB2A40D9FA00F203D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B05ECE62A2E690900DF65E1 /* StorageManager.swift */,
+				0B8587A72A40CC8900F203D4 /* MapManager.swift */,
+				0B9E547D2A36251000E19F30 /* RatingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0B8587AD2A40DA4100F203D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B74D0702A1F7F8100AAB546 /* AppDelegate.swift */,
+				0B74D0722A1F7F8100AAB546 /* SceneDelegate.swift */,
+				0B74D0792A1F7F8300AAB546 /* Assets.xcassets */,
+				0B74D07E2A1F7F8300AAB546 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		0B8587AE2A40DA6E00F203D4 /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				0B74D0762A1F7F8100AAB546 /* Main.storyboard */,
+				0B74D07B2A1F7F8300AAB546 /* LaunchScreen.storyboard */,
+			);
+			path = IBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +219,7 @@
 				0B74D0712A1F7F8100AAB546 /* AppDelegate.swift in Sources */,
 				0B05ECE72A2E690900DF65E1 /* StorageManager.swift in Sources */,
 				0B3D539D2A3C6B1000538BA0 /* MapViewController.swift in Sources */,
+				0B8587A82A40CC8900F203D4 /* MapManager.swift in Sources */,
 				0B9E547E2A36251000E19F30 /* RatingControl.swift in Sources */,
 				0B7F05072A20A71E00E452C4 /* PlaceModel.swift in Sources */,
 				0B74D0872A209B6700AAB546 /* CustomTableViewCell.swift in Sources */,
@@ -328,7 +372,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MDPGGBTB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -359,7 +403,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2MDPGGBTB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
