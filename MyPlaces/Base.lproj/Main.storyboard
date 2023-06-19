@@ -131,7 +131,7 @@
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <segue destination="8rj-5u-DQd" kind="presentation" identifier="getAdress" id="vD1-FN-jkv"/>
+                                                        <segue destination="8rj-5u-DQd" kind="presentation" identifier="getAddress" id="vD1-FN-jkv"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -190,7 +190,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-4i-vQj" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-4i-vQj" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
@@ -309,8 +309,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="doneButtonPressed" destination="8rj-5u-DQd" eventType="touchUpInside" id="ZYT-GI-Bcs"/>
-                                    <action selector="doneButtonPressed:" destination="8rj-5u-DQd" eventType="touchUpInside" id="gcJ-ct-XPc"/>
+                                    <action selector="doneButtonPressed" destination="8rj-5u-DQd" eventType="touchUpInside" id="UBA-5k-igj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -337,7 +336,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ynj-bQ-50r"/>
                     <connections>
-                        <outlet property="adressLabel" destination="VaF-KG-Agh" id="CxF-TG-rA3"/>
+                        <outlet property="addressLabel" destination="VaF-KG-Agh" id="CxF-TG-rA3"/>
                         <outlet property="doneButton" destination="mzN-Ad-bcV" id="7VE-zM-seP"/>
                         <outlet property="mapPinImage" destination="Kp5-wp-tJh" id="MP1-GG-K1y"/>
                         <outlet property="mapView" destination="TtP-PI-dpT" id="fcT-oj-Can"/>
@@ -530,6 +529,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="Cb8-4i-vQj">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
         <designable name="Sii-MY-Ccu">
             <size key="intrinsicContentSize" width="120" height="39"/>
         </designable>

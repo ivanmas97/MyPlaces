@@ -9,9 +9,15 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol MapViewControllerDelegate {
+    func getAddress(_ address: String?)
+}
+
 class MapViewController: UIViewController {
     
+    var mapViewControllerDelegate: MapViewControllerDelegate?
     var place = Place()
+    
     var annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
     let regionInMeters = 2_500.00
@@ -19,17 +25,21 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapPinImage: UIImageView!
-    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addressLabel.text = ""
         mapView.delegate = self
         setupMapView()
         checkLocationServices()
     }
     
+    
     @IBAction func doneButtonPressed() {
+        mapViewControllerDelegate?.getAddress(addressLabel.text)
+        dismiss(animated: true)
     }
     
     @IBAction func centerViewInUserLocation() {
@@ -45,7 +55,7 @@ class MapViewController: UIViewController {
         if incomeSegueIdentifier == "showPlace" {
             setupPlacemark()
             mapPinImage.isHidden = true
-            adressLabel.isHidden = true
+            addressLabel.isHidden = true
             doneButton.isHidden = true
         }
     }
@@ -103,7 +113,7 @@ class MapViewController: UIViewController {
         switch locationManager.authorizationStatus {
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
-            if incomeSegueIdentifier == "getAdress" { showUserLocation() }
+            if incomeSegueIdentifier == "getAddress" { showUserLocation() }
             break
         case .denied:
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -130,6 +140,14 @@ class MapViewController: UIViewController {
                                             longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
+    }
+    
+    private func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
     
     private func showAlert(title: String, message: String) {
@@ -168,6 +186,37 @@ extension MapViewController: MKMapViewDelegate {
         }
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+        let center = getCenterLocation(for: mapView)
+        let geocoder = CLGeocoder()
+        
+        geocoder.reverseGeocodeLocation(center) { placmarks, error in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let placemarks = placmarks else { return }
+            
+            let placemark = placemarks.first
+            let streetName = placemark?.thoroughfare
+            let buildNumber = placemark?.subThoroughfare
+            
+            DispatchQueue.main.async {
+                
+                if streetName != nil && buildNumber != nil {
+                    self.addressLabel.text = "\(streetName!), \(buildNumber!)"
+                } else if streetName != nil {
+                    self.addressLabel.text = "\(streetName!)"
+                } else {
+                    self.addressLabel.text = ""
+                }
+            }
+        }
     }
 }
 
