@@ -312,6 +312,20 @@
                                     <action selector="doneButtonPressed" destination="8rj-5u-DQd" eventType="touchUpInside" id="UBA-5k-igj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsC-Jf-JEs">
+                                <rect key="frame" x="172" y="700" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EmK-Cb-nVa"/>
+                                    <constraint firstAttribute="width" constant="50" id="abP-G0-93e"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GetDirection" title="" imagePadding="0.0">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="directionButtonPressed" destination="8rj-5u-DQd" eventType="touchUpInside" id="csX-2J-tDQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h8w-pB-WGE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -327,7 +341,9 @@
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="top" secondItem="h8w-pB-WGE" secondAttribute="top" constant="-59" id="Lk0-vS-PjC"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="top" secondItem="jS4-kA-oI8" secondAttribute="top" id="X2U-xQ-97u"/>
                             <constraint firstItem="Kp5-wp-tJh" firstAttribute="centerY" secondItem="jS4-kA-oI8" secondAttribute="centerY" constant="-20" id="coC-hU-zLx"/>
+                            <constraint firstItem="qsC-Jf-JEs" firstAttribute="centerX" secondItem="TtP-PI-dpT" secondAttribute="centerX" id="eC3-YI-x7e"/>
                             <constraint firstItem="TtP-PI-dpT" firstAttribute="top" secondItem="VaF-KG-Agh" secondAttribute="bottom" constant="-195" id="es8-vg-IoT"/>
+                            <constraint firstItem="qsC-Jf-JEs" firstAttribute="centerY" secondItem="pyY-S3-F4X" secondAttribute="centerY" id="jKh-Cb-7md"/>
                             <constraint firstItem="VaF-KG-Agh" firstAttribute="leading" secondItem="h8w-pB-WGE" secondAttribute="leading" constant="25" id="kN2-pH-Qiq"/>
                             <constraint firstItem="l7o-uL-uPL" firstAttribute="top" secondItem="jS4-kA-oI8" secondAttribute="topMargin" constant="30" id="nQb-fw-GrZ"/>
                             <constraint firstItem="pyY-S3-F4X" firstAttribute="centerY" secondItem="mzN-Ad-bcV" secondAttribute="centerY" id="rsE-3m-cE7"/>
@@ -337,6 +353,7 @@
                     <navigationItem key="navigationItem" id="ynj-bQ-50r"/>
                     <connections>
                         <outlet property="addressLabel" destination="VaF-KG-Agh" id="CxF-TG-rA3"/>
+                        <outlet property="directionButton" destination="qsC-Jf-JEs" id="6fu-NY-n8Z"/>
                         <outlet property="doneButton" destination="mzN-Ad-bcV" id="7VE-zM-seP"/>
                         <outlet property="mapPinImage" destination="Kp5-wp-tJh" id="MP1-GG-K1y"/>
                         <outlet property="mapView" destination="TtP-PI-dpT" id="fcT-oj-Can"/>
@@ -541,6 +558,7 @@
         <segue reference="Z77-12-wOY"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <image name="Pin" width="40" height="40"/>
         <image name="Placeholder" width="20" height="20"/>
