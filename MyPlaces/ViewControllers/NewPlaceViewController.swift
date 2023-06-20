@@ -106,7 +106,6 @@ class NewPlaceViewController: UITableViewController {
         
     }
     
-    
     func savePlace() {
         let image = imageIsChanged ? placeImage.image : UIImage(named: "imagePlaceholder")
         
@@ -160,9 +159,13 @@ class NewPlaceViewController: UITableViewController {
         dismiss(animated: true)
     }
     
+    deinit {
+        print("Deinit", NewPlaceViewController.self)
+    }
+    
 }
 
-// MARK: Text field delegate
+    // MARK: - Text field delegate
 
 extension NewPlaceViewController: UITextFieldDelegate {
     
@@ -183,7 +186,7 @@ extension NewPlaceViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: Work with image
+    // MARK: - Work with image
 
 extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

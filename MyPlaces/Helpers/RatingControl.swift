@@ -42,6 +42,7 @@ import UIKit
     }
     
     // MARK: Button action
+    
     @objc func ratingButtonTapped(button: UIButton) {
         
         guard let index = ratingButtons.firstIndex(of: button) else { return }
@@ -106,5 +107,9 @@ import UIKit
         for (index,button) in ratingButtons.enumerated() {
             button.isSelected = index < rating
         }
+    }
+    
+    deinit {
+        print("Deinit", RatingControl.self)
     }
 }

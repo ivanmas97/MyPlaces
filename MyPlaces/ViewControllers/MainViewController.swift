@@ -13,7 +13,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var searchController = UISearchController(searchResultsController: nil)
     private var places: Results<Place>!
     private var filteredPlaces: Results<Place>!
-    private var ascendingSorting = true
+    private var ascendingSorting = false
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
@@ -32,6 +32,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.sectionHeaderTopPadding = 0
         places = realm.objects(Place.self)
+        sorting()
         
         // Setup the search controller
         searchController.searchResultsUpdater = self
@@ -110,9 +111,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ascendingSorting.toggle()
         
         if ascendingSorting == true {
-            reverseSortingButton.image = UIImage(systemName: "arrow.down")
-        } else {
             reverseSortingButton.image = UIImage(systemName: "arrow.up")
+        } else {
+            reverseSortingButton.image = UIImage(systemName: "arrow.down")
         }
         
         sorting()
@@ -120,10 +121,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private func sorting() {
        
-        if segmentedControl.selectedSegmentIndex == 0 {
-            places = places.sorted(byKeyPath: "date", ascending: ascendingSorting)
-        } else {
-            places = places.sorted(byKeyPath: "name", ascending: ascendingSorting)
+        switch segmentedControl.selectedSegmentIndex {
+        case 0: places = places.sorted(byKeyPath: "rating", ascending: ascendingSorting)
+        case 1: places = places.sorted(byKeyPath: "name", ascending: ascendingSorting)
+        case 2: places = places.sorted(byKeyPath: "date", ascending: ascendingSorting)
+        default:
+            break
         }
         
         tableView.reloadData()

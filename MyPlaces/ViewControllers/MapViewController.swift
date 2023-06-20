@@ -88,6 +88,10 @@ class MapViewController: UIViewController {
         mapManager.locationManager.delegate = self
         mapManager.locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
+    
+    deinit {
+        print("Deinit", MapViewController.self)
+    }
 }
     
 extension MapViewController: MKMapViewDelegate {
@@ -122,7 +126,7 @@ extension MapViewController: MKMapViewDelegate {
         let geocoder = CLGeocoder()
         
         if incomeSegueIdentifier == "showPlace" && previousLocation != nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                 self.mapManager.showUserLocation(mapView: mapView)
             }
         }

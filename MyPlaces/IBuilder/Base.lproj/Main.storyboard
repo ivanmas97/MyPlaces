@@ -465,8 +465,9 @@
                                     <constraint firstAttribute="height" constant="29.999999999999886" id="QTW-2A-djA"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Date"/>
+                                    <segment title="Rating"/>
                                     <segment title="Name"/>
+                                    <segment title="Date"/>
                                 </segments>
                                 <connections>
                                     <action selector="sortSelection:" destination="nlK-1a-JmE" eventType="valueChanged" id="4om-UT-Obn"/>
@@ -515,7 +516,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>

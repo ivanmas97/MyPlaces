@@ -24,4 +24,8 @@ class StorageManager {
             realm.delete(place)
         }
     }
+    
+    deinit {
+        print("Deinit", StorageManager.self)
+    }
 }
